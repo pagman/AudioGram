@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+
+    // tasks.withType(JavaCompile) {
+    //     options.deprecation = true
+    // }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "org.billthefarmer.siggen"
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionName "1.20"
+        versionCode 120
+
+        buildConfigField "long", "BUILT", System.currentTimeMillis() + "L"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        disable 'IconDensities', 'ClickableViewAccessibility', 'Wakelock',
+                'CustomViewStyleable'
+        abortOnError false
+    }
+}

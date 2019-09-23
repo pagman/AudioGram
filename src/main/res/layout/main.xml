@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:ignore="RtlHardcoded">
+
+
+
+
+
+  <Button
+      android:id="@+id/mute"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/higher"
+      android:drawableLeft="@android:drawable/checkbox_off_background"
+      android:drawablePadding="8dp"
+      android:text="@string/mute" />
+
+ <Button
+     android:id="@+id/save"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_below="@+id/mute"
+     android:layout_marginTop="-2dp"
+     android:drawablePadding="8dp"
+     android:paddingTop="20dp"
+     android:text="save" />
+
+
+
+
+ <LinearLayout
+     android:id="@+id/knobDisplay"
+     android:layout_marginTop="60dp"
+     android:layout_below="@+id/save"
+     android:layout_width="match_parent"
+     android:layout_height="200dp">
+  <org.billthefarmer.siggen.Knob
+      android:id="@+id/knob"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/level"
+      app:BackgroundColour="?android:attr/colorBackground"
+      app:TextColour="?android:attr/textColorPrimary" />
+  <org.billthefarmer.siggen.Display
+      android:id="@+id/display"
+      android:layout_width="wrap_content"
+      android:layout_height="200dp"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginBottom="8dp"
+      app:BackgroundColour="?android:attr/colorBackground"
+      app:TextColour="?android:attr/textColorPrimary" />
+
+
+ </LinearLayout>
+ <LinearLayout
+     android:id="@+id/frequencyButtons1"
+     android:layout_below="@+id/knobDisplay"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+     <Button
+         android:id="@+id/f125"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:text="125 Hz"/>
+     <Button
+         android:id="@+id/f250"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:text="250 Hz"/>
+     <Button
+         android:id="@+id/f500"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:text="500 Hz"/>
+     <Button
+         android:id="@+id/f1000"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:text="1000 Hz"/>
+
+ </LinearLayout>
+ <LinearLayout
+     android:id="@+id/frequencyButtons2"
+     android:layout_below="@+id/frequencyButtons1"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+     <Button
+         android:id="@+id/f1500"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:text="1500 Hz"/>
+     <Button
+         android:id="@+id/f2000"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:text="2000 Hz"/>
+     <Button
+         android:id="@+id/f4000"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:text="4000 Hz"/>
+     <Button
+         android:id="@+id/f8000"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAllCaps="false"
+         android:text="8000 Hz"/>
+ </LinearLayout>
+
+
+
+  <SeekBar
+      android:id="@id/level"
+      android:layout_above="@+id/fine"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="32dp" />
+ <SeekBar
+     android:id="@+id/fine"
+     android:layout_alignParentBottom="true"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginBottom="46dp" />
+ 
+ 
+
+
+
+
+
+
+
+
+</RelativeLayout>

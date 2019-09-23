@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:ignore="RtlHardcoded">
+
+
+
+  <ImageButton
+      android:id="@+id/lower"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="?attr/previous"
+      tools:ignore="ContentDescription" />
+
+  <ImageButton
+      android:id="@+id/higher"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/lower"
+      android:src="?attr/next"
+      tools:ignore="ContentDescription" />
+
+  <Button
+      android:id="@+id/mute"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/higher"
+      android:drawableLeft="@android:drawable/checkbox_off_background"
+      android:drawablePadding="8dp"
+      android:text="@string/mute" />
+  <Button
+      android:id="@+id/save"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/mute"
+      android:paddingTop="20dp"
+      android:drawablePadding="8dp"
+      android:text="save" />
+
+
+
+
+  <LinearLayout
+      android:layout_below="@+id/save"
+      android:layout_width="match_parent"
+      android:layout_height="100dp">
+    <org.billthefarmer.siggen.Knob
+        android:id="@+id/knob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/level"
+        app:BackgroundColour="?android:attr/colorBackground"
+        app:TextColour="?android:attr/textColorPrimary" />
+    <org.billthefarmer.siggen.Display
+        android:id="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        app:BackgroundColour="?android:attr/colorBackground"
+        app:TextColour="?android:attr/textColorPrimary" />
+
+
+  </LinearLayout>
+
+  <SeekBar
+      android:id="@+id/fine"
+      android:layout_alignParentBottom="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp" />
+  <SeekBar
+      android:id="@id/level"
+      android:layout_above="@+id/fine"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp" />
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
